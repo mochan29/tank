@@ -17,7 +17,6 @@ void Tank::Initialize()
 
 void Tank::Update()
 {
-
 	XMMATRIX rotY = XMMatrixIdentity();
 	XMVECTOR move{ 0,0,0,0 };
 	XMVECTOR rotVec{ 0,0,0,0 };

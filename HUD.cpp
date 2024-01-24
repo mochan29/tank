@@ -3,8 +3,6 @@
 #include "PlayScene.h"
 #include <string>
 
-
-
 void HUD::Initialize()
 {
 	hHUD_ = Image::Load("Image\\noko.png");
@@ -38,9 +36,10 @@ void HUD::Update()
 	{
 		digit[0] = 0;
 		std::string s = std::to_string(eneNum);
-		digit[1]= int(s[0] - '0');
-		digit[2] = int(s[1] - '0');
-
+		for (int i = 1; i < DIGIT; i++)
+		{
+			digit[i] = int(s[i-1] - '0');
+		}
 	}
 	else
 	{

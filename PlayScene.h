@@ -5,6 +5,7 @@
 
 class Tank;
 class Enemy;
+
 namespace
 {
 	int ENEMYNUM = 2;
