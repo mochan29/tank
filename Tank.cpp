@@ -10,10 +10,14 @@ void Tank::Initialize()
 	hModel_ = Model::Load("Model\\tankbody.fbx");
 	assert(hModel_ >= 0);
 	Instantiate<TankHead>(this);
+
+	SphereCollider* collision = new SphereCollider({ 0,0,0 }, 0.6f);
+	AddCollider(collision);
 }
 
 void Tank::Update()
 {
+
 	XMMATRIX rotY = XMMatrixIdentity();
 	XMVECTOR move{ 0,0,0,0 };
 	XMVECTOR rotVec{ 0,0,0,0 };
@@ -51,7 +55,7 @@ void Tank::Update()
 
 	if (data.hit)
 	{
-		transform_.position_.y=-data.dist+1.5f;
+		transform_.position_.y=-data.dist+1.0f;
 	}
 
 	if (Input::IsKeyDown(DIK_Z))

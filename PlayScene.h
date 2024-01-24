@@ -24,7 +24,6 @@ public:
 	void Draw() override;
 	void Release() override {};
 	void DescEnemy() { enemyNum_--; }
-	bool IsEnemyLeft() { return enemyNum_> 0; }
 	int GetEnemyNum() { return enemyNum_; }
 
 };

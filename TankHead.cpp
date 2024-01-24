@@ -7,6 +7,9 @@ void TankHead::Initialize()
 {
 	hModel_ = Model::Load("Model\\tankhead.fbx");
 	assert(hModel_ >= 0);
+
+	SphereCollider* collision = new SphereCollider({ 0,0,0 }, 0.6f);
+	AddCollider(collision);
 }
 
 void TankHead::Update()

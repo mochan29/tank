@@ -22,8 +22,11 @@ void PlayScene::Initialize()
 
 void PlayScene::Update()
 {
-	//SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
-	//pSceneManager->ChangeScene(SCENE_ID_CLEAR);
+	if (enemyNum_ <= 0)
+	{
+		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
+		pSceneManager->ChangeScene(SCENE_ID_CLEAR);
+	}
 }
 
 void PlayScene::Draw()

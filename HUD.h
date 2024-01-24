@@ -18,6 +18,7 @@ public:
 	Transform tHUD_;
 	std::vector<Transform>tNum_;
 	PlayScene* playScene_;
+	int digit[DIGIT];
 	HUD(GameObject* parent) :GameObject(parent, "HUD"),hHUD_(-1),hNum_(-1){};
 	void Initialize() override;
 	void Update() override;
