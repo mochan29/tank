@@ -18,7 +18,7 @@ class PlayScene :
 	Text* pText;
 
 public:
-	PlayScene(GameObject* parent) :GameObject(parent, "PlayScene"),player(nullptr),enemyNum_(2), pText(nullptr){};
+	PlayScene(GameObject* parent) :GameObject(parent, "PlayScene"),player(nullptr),enemyNum_(-1), pText(nullptr){};
 	void Initialize() override;
 	void Update() override;
 	void Draw() override;

@@ -51,7 +51,7 @@ void Tank::Update()
 
 	if (data.hit)
 	{
-		transform_.position_.y=-data.dist+1.0f;
+		transform_.position_.y=-data.dist+1.5f;
 	}
 
 	if (Input::IsKeyDown(DIK_Z))
