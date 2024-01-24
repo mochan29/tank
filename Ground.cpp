@@ -6,7 +6,6 @@ void Ground::Initialize()
 {
 	hModel_ = Model::Load("Model\\Ground.fbx");
 	assert(hModel_ >= 0);
-	//transform_.position_ = { 0,-0.5,0 };
 }
 
 void Ground::Update()

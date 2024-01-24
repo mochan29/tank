@@ -33,8 +33,6 @@ void Enemy::Initialize()
 
 	SphereCollider* collision = new SphereCollider({ 0,0,0 }, 0.6f);
 	AddCollider(collision);
-	pText = new Text;
-	pText->Initialize();
 }
 
 void Enemy::Update()
@@ -45,19 +43,10 @@ void Enemy::Draw()
 {
 	Model::SetTransform(hModel_, transform_);
 	Model::Draw(hModel_);
-	pText->Draw(30, 30, "LEFT");
-	//pText->Draw(30, 60, );
 }
 
 void Enemy::OnCollision(GameObject* pTarget)
 {
-	if (pTarget->GetObjectName() == "Bullet")
-	{
-		this->KillMe();
-		pTarget->KillMe();		
-		this->zen_ = true;
-	}
-
 	if (pTarget->GetObjectName() == "Tank" || pTarget->GetObjectName() == "TankHead")
 	{
 		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");

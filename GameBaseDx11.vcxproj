@@ -157,6 +157,7 @@
     <ClCompile Include="Tank.cpp" />
     <ClCompile Include="TankHead.cpp" />
     <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="HUD.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -191,6 +192,7 @@
     <ClInclude Include="Tank.h" />
     <ClInclude Include="TankHead.h" />
     <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="HUD.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Assets\Shader\BillBoard.hlsl">

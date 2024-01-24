@@ -12,7 +12,6 @@ class Tank:
 {
 	int hModel_;
 	XMVECTOR front_;
-	XMVECTOR moved_;
 	float speed_;
 	int camState_;
 public:

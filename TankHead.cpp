@@ -13,11 +13,11 @@ void TankHead::Update()
 {
 	if (Input::IsKey(DIK_LEFT))
 	{
-		transform_.rotate_.y -= 1;
+		this->transform_.rotate_.y -= 1;
 	}
 	if (Input::IsKey(DIK_RIGHT))
 	{
-		transform_.rotate_.y += 1;
+		this->transform_.rotate_.y += 1;
 	}
 	if (Input::IsKeyDown(DIK_SPACE))
 	{

@@ -9,6 +9,7 @@ void Bullet::Initialize()
 	transform_.position_ = { 0,0,0 };
 	SphereCollider* collision = new SphereCollider({ 0,0,0 }, 0.3f);
 	AddCollider(collision);
+	playScene_ = (PlayScene*)GetParent();
 }
 
 void Bullet::Update()
@@ -26,3 +27,14 @@ void Bullet::Draw()
 	Model::SetTransform(hModel_, transform_);
 	Model::Draw(hModel_);
 }
+
+void Bullet::OnCollision(GameObject* pTarget)
+{
+	if (pTarget->GetObjectName() == "Enemy")
+	{
+		playScene_->DescEnemy();
+		pTarget->KillMe();
+	}
+	this->KillMe();
+}
+

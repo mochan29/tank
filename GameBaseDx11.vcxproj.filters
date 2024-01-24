@@ -134,6 +134,9 @@
     <ClCompile Include="OverScene.cpp">
       <Filter>Scene\Over</Filter>
     </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Scene\Play</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -231,6 +234,9 @@
     </ClInclude>
     <ClInclude Include="OverScene.h">
       <Filter>Scene\Over</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>Scene\Play</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

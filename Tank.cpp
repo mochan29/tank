@@ -9,7 +9,6 @@ void Tank::Initialize()
 {
 	hModel_ = Model::Load("Model\\tankbody.fbx");
 	assert(hModel_ >= 0);
-	transform_.position_ = { 0,0.5,0 };
 	Instantiate<TankHead>(this);
 }
 
@@ -75,7 +74,7 @@ void Tank::Update()
 	case TPS_NOROT:
 	{
 		XMFLOAT3 camPos = transform_.position_;
-		camPos.y += 20.0f;
+		camPos.y += 15.0f;
 		camPos.z -= 10.0f;
 		Camera::SetPosition(camPos);
 		Camera::SetTarget(transform_.position_);
@@ -97,11 +96,6 @@ void Tank::Update()
 		XMFLOAT3 camTarget;
 		XMStoreFloat3(&camTarget, pos +move);
 		Camera::SetTarget(camTarget);
-		break;
-	}
-	case MAX:
-	{
-
 		break;
 	}
 	default:
