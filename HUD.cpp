@@ -24,5 +24,7 @@ void HUD::Draw()
 {
 	Image::SetTransform(hHUD_, tHUD_);
 	Image::Draw(hHUD_);
+	Image::SetTransform(hHUD_, tHUD_);
+	Image::Draw(hHUD_);
 
 }
